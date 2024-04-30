@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="Factory\Abstract\" />
     <Folder Include="Factory\Concrete\" />
-    <Folder Include="Loggers\Abstract\" />
     <Folder Include="Loggers\Concrete\" />
   </ItemGroup>
 
