@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FactoryMethod.Factory.Abstract;
+using FactoryMethod.Loggers.Abstract;
 
 namespace FactoryMethod
 {
@@ -14,6 +15,13 @@ namespace FactoryMethod
         public CustomerManager(ILoggerFactory loggerFactory)
         {
             _loggerFactory = loggerFactory;
+        }
+
+        public void CreateCustomer()
+        {
+            Console.WriteLine("Customer created!");
+            ILogger logger = _loggerFactory.Create();
+            logger.Log();
         }
     }
 }
